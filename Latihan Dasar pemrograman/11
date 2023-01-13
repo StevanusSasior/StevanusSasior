@@ -1,0 +1,246 @@
+- 👋 Hi, I’m @StevanusSasior
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+StevanusSasior/StevanusSasior is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+
+Fungsi pada python adalah kumpulan perintah atau baris kode yang dikelompokkan menjadi satu kesatuan untuk kemudian bisa dipanggil atau digunakan berkali-kali.
+Sebuah fungsi dapat menerima parameter, dapat mengembalikan suatu nilai, dan dapat dipanggil berkali-kali secara independen.
+ 
+
+
+(KEUNTUNGAN)
+
+Membagi kode program menjadi bagian-bagian kecil dengan tugasnya masing-masing.
+Membuat kode program menjadi lebih “reusable” dan lebih terstruktur.
+
+
+SINTAKS
+
+():
+    Logic Program
+Cara memanggil fungsi dengan menuliskan function_name diikuti kurung buka tutup () beserta parameter jika ada
+
+function_name()
+Buatlah fungsi dengan nama "helloPython" yang berfungsi untuk mencetak "Welcome in Python Language"
+def helloPython():
+  print('Welcome in Python Language')
+
+helloPython()
+Welcome in Python Language
+nama = 'STEVANUS SASIOR'
+def helloPython():
+  print(nama)
+
+helloPython()
+STEVANUS SASIOR
+nama = 'STEVANUS'
+nama_ = 'NICO'
+def helloPython():
+  print(nama)
+
+def helloPython():
+  print(nama)
+
+helloPython()
+helloPython()
+STEVANUS
+STEVANUS
+Fungsi dengan parameter
+Sebuah fungsi dapat menerima parameter ataupun argumen yang merupakan suatu nilai/variabel yang dilemparkan ke dalam fungsi untuk diproses lebih lanjut.
+Sintaks
+def function_name(param):
+    Logic Program
+Cara memanggil fungsi dengan menuliskan function_name diikuti kurung buka tutup () beserta parameter
+
+function_name(param)
+Buatlah fungsi dengan nama "fullName" yang mempunyai parameter "firstname" dan "lastname" digunakan untuk mencetak "firstname" dan "lastname"
+
+def fullName(fisrtname,lastname):
+  print(f"{fisrtname} {lastname}")
+
+fullName("STEVANUS","SASIOR")
+STEVANUS SASIOR
+Parameter fungsi diperbolehkan menggunakan lebih dari 1, dimana paramater tersebut ada yang wajib harus diisi dan ada yang tidak harus diisi
+
+def function_name(param_1, param_2, param_3,....):
+    Logic Program
+Cara memanggil fungsi dengan menuliskan function_name diikuti kurung buka tutup () beserta parameter
+
+function_name(param_1, param_2, param_3)
+Buatlah fungsi dengan nama maxValue yang mempunyai parameter "val_1","val_2" dan "val_3" yang bertujuan untuk mencari nilai terbesar dari 3 nilai tersebut
+def maxValue(val_1,val_2,val_3):
+  if val_1 >= val_2 and val_1 >= val_3:
+    print(f"Nilai Terbesar adalah {val_1}")
+
+maxValue(100, 70, 65)
+Nilai Terbesar adalah 100
+Parameter opsional digunakan pada fungsi dengan cara memberikan nilai default, artinya nilai parameter sudah diberikan terlebih dahulu tanpa dipanggil
+
+def function_name(param_1, param_2, param_3 = 'Nilai'):
+    Logic Program
+Buatlah fungsi "countCircleArea" dengan 2 parameter yaitu "phi" dan "diameter" dimana parameter phi mempunyai nilai default 3.14
+
+def countCyrcleArea(diameter, phi=3.14):
+  r = diameter/2
+  return phi * r * r
+countCyrcleArea(10)
+78.5
+from IPython.core.compilerop import CachingCompiler
+def countCyrcleArea(diameter, phi=3.14):
+  r = diameter/2
+  return phi * r * r
+countCyrcleArea(10)
+
+def countSquareArea(sisi):
+  return sisi * sisi
+
+circle = countCyrcleArea(10)
+square = countSquareArea(10)
+
+result = square - circle
+print(f'{result}')
+21.5
+Fungsi dengan 2 Parameter opsional juga dapat dilakukan pada Python.
+
+def info(suhu, daerah='Sukabumi', satuan = 'Celcius'):
+    print(f"Suhu sekarang di {daerah} : {suhu} {satuan} ")
+Adapun Cara memanggilnya
+
+info(30)
+#Cobalah fungsi tersebut pada area kode disini
+def info(suhu, daerah='Nagrak', satuan = 'Celcius'):
+    print(f"Suhu sekarang di {daerah} : {suhu} {satuan} ")
+
+info(24)
+Suhu sekarang di Nagrak : 24 Celcius 
+def info(suhu, daerah='Nagrak', satuan = 'Celcius'):
+    print(f"Suhu sekarang di {daerah} : {suhu} {satuan} ")
+
+info(24)
+info(25, 'Pelabuhan')
+info(30, 'Sukabumi')
+
+info(24, satuan='Farenhelt')
+Suhu sekarang di Nagrak : 24 Celcius 
+Suhu sekarang di Pelabuhan : 25 Celcius 
+Suhu sekarang di Sukabumi : 30 Celcius 
+Suhu sekarang di Nagrak : 24 Farenhelt 
+Fungsi dengan Return Value
+Yaitu fungsi dimana akhir dari programnya adalah nilai kembalian atau nilai balik. Artinya nilai dalam fungsi dapat ditampung lagi ke variabel lain untuk digunakan operasi lebih lanjut.
+
+Buatlah fungsi dengan return value yang digunakan untuk mengecek sebuah bilangan termasuk bilangan negatif, bilangan neteral(0) dan bilangan positif
+
+def factorial(bil):
+  if bil==1:
+    return 1
+
+  return bil * factorial(bil -1)
+
+factorial(4)
+24
+Soal Latihan
+Buatlah fungsi untuk menjumlahkan total nilai dari list
+Buatlah fungsi untuk mencari nilai terbesar dari sekumpulan list
+Buatlah fungsi untuk menjumlahkan 2 buah list
+#Soal 1
+def totalVal (list_val):
+  total = 0
+  for i in list_val:
+    total += i
+  return total
+
+def meanVal (list_val):
+  rata2 = totalVal(list_val)/len(list_val)
+  return rata2
+
+nilai = [90,80,70,60,70]
+meanVal(nilai)
+74.0
+#Soal 1
+def totalVal (list_val):
+  total = 0
+  for i in list_val:
+    total += i
+  return total
+
+nilai = [90,80,70,60,70]
+totalVal(nilai)
+370
+#Soal 2
+def getMaxValue(list_val):
+  maks = 0
+  for i in list_val:
+    if i > maks:
+      maks = i
+
+    return maks
+
+nilai = [90,89,10,65,40]
+getMaxValue(nilai)
+90
+#Soal 3
+nilai_pemograman = [
+    {
+        "nama":"Stevanus sasior",
+     "nilai":75
+    },
+    {
+        "nama":"Taufik",
+     "nilai":85
+    },
+    {
+        "nama":"Maxi",
+     "nilai":80
+    },
+    {
+        "nama":"Nico",
+     "nilai":90
+    }
+]
+
+print(nilai_pemograman)
+[{'nama': 'Stevanus sasior', 'nilai': 75}, {'nama': 'Taufik', 'nilai': 85}, {'nama': 'Maxi', 'nilai': 80}, {'nama': 'Nico', 'nilai': 90}]
+print('##  Program Python Penjumlahan List / Array  ##')
+print('===============================================')
+print()
+  
+n = int(input('Input jumlah element list: '))
+print()
+ 
+print('Input',n,'angka (dipisah dengan enter): ');
+ 
+# simpan setiap angka yang diinput ke dalam list
+x = []
+for i in range(n):
+  print('Angka ke-',i+1,': ',sep='',end='')
+  x.append(int(input()))
+ 
+print()
+ 
+# cari total semua element list
+total = 0
+for i in range(n):
+  total = total+x[i];
+ 
+print('Total penjumlahan dari',n,'angka tersebut adalah:',total);
+##  Program Python Penjumlahan List / Array  ##
+===============================================
+
+Input jumlah element list: 7
+
+Input 7 angka (dipisah dengan enter): 
+Angka ke-1: 84
+Angka ke-2: 24
+Angka ke-3: 61
+Angka ke-4: 95
+Angka ke-5: 66
+Angka ke-6: 21
+Angka ke-7: 22
+
+Total penjumlahan dari 7 angka tersebut adalah: 373
